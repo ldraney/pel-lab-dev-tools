@@ -4,7 +4,11 @@
   "description": "Development tools for managing Monday.com boards and PostgreSQL formula/ingredient data",
   "main": "index.js",
   "scripts": {
-    "map-boards": "node src/monday/map-board-connections.js",
+    "discover-workspaces": "node src/monday/discover-workspaces.js",
+    "find-crm-boards": "node src/monday/find-crm-boards.js",
+    "trace-accounts": "node src/monday/deep-trace-accounts.js",
+    "generate-mermaid": "node src/monday/generate-accounts-mermaid.js",
+    "map-board": "node src/monday/map-board-connections.js",
     "inspect-db": "node src/database/inspect-database.js",
     "sync-data": "node src/monday/sync-to-monday.js",
     "board-health": "node src/monday/board-health-check.js",
@@ -15,7 +19,9 @@
     "postgresql",
     "cosmetics",
     "formulas",
-    "dev-tools"
+    "dev-tools",
+    "crm",
+    "visualization"
   ],
   "author": "Pure Earth Labs",
   "license": "MIT",
@@ -26,7 +32,7 @@
     "chalk": "^4.1.2",
     "inquirer": "^8.2.6",
     "csv-parse": "^6.1.0",
-    "json2csv": "^6.0.0",
+    "json2csv": "^5.0.7",
     "axios": "^1.7.2"
   },
   "devDependencies": {

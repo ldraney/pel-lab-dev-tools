@@ -1,0 +1,80 @@
+{
+  "accountsBoard": {
+    "id": "9161287533",
+    "name": "Accounts",
+    "workspace": "CRM",
+    "workspaceId": "11007618"
+  },
+  "mirrorConnections": [
+    {
+      "columnName": "Production Status",
+      "columnId": "lookup_mkrmxq56",
+      "sourceBoard": {
+        "id": "9304930311",
+        "name": "Production",
+        "workspace": "Production"
+      }
+    },
+    {
+      "columnName": "Shopify Status",
+      "columnId": "lookup_mksg2nhr",
+      "sourceBoard": {
+        "name": "Shopify Integration",
+        "workspace": "E-commerce",
+        "status": "not_found"
+      }
+    },
+    {
+      "columnName": "Development Status",
+      "columnId": "lookup_mkrn58fa",
+      "sourceBoard": {
+        "name": "Development Board",
+        "workspace": "Lab",
+        "status": "not_found"
+      }
+    },
+    {
+      "columnName": "Deals",
+      "columnId": "account_deal",
+      "sourceBoard": {
+        "id": "9384202537",
+        "name": "Deals",
+        "workspace": "CRM - template"
+      }
+    },
+    {
+      "columnName": "Dev Deals Status",
+      "columnId": "lookup_mkrz4v9x",
+      "sourceBoard": {
+        "id": "9161287503",
+        "name": "Dev Deals",
+        "workspace": "CRM"
+      }
+    },
+    {
+      "columnName": "Prod Deals Status",
+      "columnId": "lookup_mkrz94tc",
+      "sourceBoard": {
+        "id": "9384243852",
+        "name": "Prod Deals",
+        "workspace": "CRM"
+      }
+    },
+    {
+      "columnName": "Project Status",
+      "columnId": "lookup_mksj94j3",
+      "sourceBoard": {
+        "id": "9161287526",
+        "name": "Projects",
+        "workspace": "CRM"
+      }
+    }
+  ],
+  "relationConnections": [],
+  "connectedWorkspaces": [
+    "Production",
+    "CRM - template",
+    "CRM"
+  ],
+  "timestamp": "2025-07-20T20:54:16.626Z"
+}

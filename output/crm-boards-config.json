@@ -1,0 +1,110 @@
+{
+  "crmWorkspace": {
+    "id": 11007618,
+    "name": "CRM"
+  },
+  "boards": [
+    {
+      "id": "9608715637",
+      "name": "formula uploads"
+    },
+    {
+      "id": "9604047786",
+      "name": "Subitems of Tasks and Tickets"
+    },
+    {
+      "id": "9580164640",
+      "name": "Tasks and Tickets"
+    },
+    {
+      "id": "9579833879",
+      "name": "Intake Forms"
+    },
+    {
+      "id": "9579404363",
+      "name": "Dev Intake Pipeline"
+    },
+    {
+      "id": "9579058781",
+      "name": "Lucas - Tasks & Tickets"
+    },
+    {
+      "id": "9576609099",
+      "name": "Tickets"
+    },
+    {
+      "id": "9576608626",
+      "name": "Tasks"
+    },
+    {
+      "id": "9453292776",
+      "name": "New Board Connections"
+    },
+    {
+      "id": "9422954152",
+      "name": "Subitems of Contacts"
+    },
+    {
+      "id": "9389053337",
+      "name": "Subitems of Leads"
+    },
+    {
+      "id": "9384460156",
+      "name": "Subitems of Products & Services"
+    },
+    {
+      "id": "9384244466",
+      "name": "Subitems of Prod Deals"
+    },
+    {
+      "id": "9384243852",
+      "name": "Prod Deals"
+    },
+    {
+      "id": "9335862564",
+      "name": "Subitems of Accounts"
+    },
+    {
+      "id": "9161288327",
+      "name": "Subitems of Projects"
+    },
+    {
+      "id": "9161288023",
+      "name": "Subitems of Dev Deals"
+    },
+    {
+      "id": "9161287692",
+      "name": "Quotes & Invoices"
+    },
+    {
+      "id": "9161287533",
+      "name": "Accounts"
+    },
+    {
+      "id": "9161287526",
+      "name": "Projects"
+    },
+    {
+      "id": "9161287505",
+      "name": "Contacts"
+    },
+    {
+      "id": "9161287503",
+      "name": "Dev Deals"
+    },
+    {
+      "id": "9161287475",
+      "name": "Activities"
+    },
+    {
+      "id": "9161287425",
+      "name": "Products & Services"
+    },
+    {
+      "id": "9161287405",
+      "name": "Leads"
+    }
+  ],
+  "connections": [],
+  "timestamp": "2025-07-20T20:48:49.124Z"
+}
