@@ -1,0 +1,35 @@
+{
+  "name": "pel-lab-dev-tools",
+  "version": "1.0.0",
+  "description": "Development tools for managing Monday.com boards and PostgreSQL formula/ingredient data",
+  "main": "index.js",
+  "scripts": {
+    "map-boards": "node src/monday/map-board-connections.js",
+    "inspect-db": "node src/database/inspect-database.js",
+    "sync-data": "node src/monday/sync-to-monday.js",
+    "board-health": "node src/monday/board-health-check.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monday.com",
+    "postgresql",
+    "cosmetics",
+    "formulas",
+    "dev-tools"
+  ],
+  "author": "Pure Earth Labs",
+  "license": "MIT",
+  "dependencies": {
+    "monday-sdk-js": "^0.5.6",
+    "pg": "^8.16.3",
+    "dotenv": "^16.4.7",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.6",
+    "csv-parse": "^6.1.0",
+    "json2csv": "^6.0.0",
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
