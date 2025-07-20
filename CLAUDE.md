@@ -152,10 +152,48 @@ const BOARD_ID = 'target_board_id';
 3. **Development** (8446397459) connects via `board_relation` "EPOs - Ingredients" to **EPO - Ingredients** (9387127195)
 
 ### Generate Mermaid Diagrams
+
+**PREFERRED ORGANIZATION STYLE:**
 ```javascript
-// Pattern for Mermaid generation
+// Executive-Friendly Left-to-Right Flow Layout
+1. Use `flowchart LR` for left-to-right organization
+2. Group by FUNCTION, not workspace (workspaces often irrelevant to business flow)
+3. Structure: Triggers → Core Workflow → External/Completion
+4. Clean board boxes with external action callouts (dotted lines)
+5. Avoid cramped text inside board boxes
+```
+
+**Layout Pattern:**
+```mermaid
+flowchart LR
+    subgraph TRIGGERS ["🎯 TRIGGERS"]
+        // Preparation and trigger events
+    end
+    
+    subgraph BOARDS ["📋 MONDAY BOARDS WORKFLOW"] 
+        // All Monday boards grouped by workflow sequence
+        // NOT by workspace - focus on business process
+    end
+    
+    subgraph EXTERNAL ["🌐 EXTERNAL & COMPLETION"]
+        // External systems and final steps
+    end
+    
+    // Clean action explanations with dotted connections
+    ACTION_BLOCKS -.-> RELEVANT_BOARDS
+```
+
+**Why This Works Better:**
+- **Functional Grouping**: Focus on business process, not technical workspace structure
+- **Executive Clarity**: Left-to-right tells the story naturally
+- **Clean Presentation**: Boards are uncluttered, actions explained separately
+- **Less Chaotic**: Linear flow prevents crossing arrows and visual complexity
+
+**Original Pattern (deprecated):**
+```javascript
+// OLD: Workspace-focused grouping
 1. Read connection JSON file
-2. Group by workspace
+2. Group by workspace (creates visual chaos)
 3. Create subgraphs for each workspace
 4. Add styled nodes for boards
 5. Add arrows for connections
