@@ -159,7 +159,9 @@ async function deepTraceAccounts() {
     connectionMap.connectedWorkspaces = Array.from(connectionMap.connectedWorkspaces);
     
     // Save the results
-    fs.writeFileSync('../../output/accounts-deep-connections.json', JSON.stringify(connectionMap, null, 2));
+    const path = require('path');
+    const outputPath = path.join(__dirname, '../../output/accounts-deep-connections.json');
+    fs.writeFileSync(outputPath, JSON.stringify(connectionMap, null, 2));
     console.log(`\n💾 Saved to: output/accounts-deep-connections.json\n`);
     
     // Generate summary

@@ -5,8 +5,10 @@ function generateAccountsMermaid() {
   
   try {
     // Read the connections file
+    const path = require('path');
+    const connectionsPath = path.join(__dirname, '../../output/accounts-deep-connections.json');
     const connectionsData = JSON.parse(
-      fs.readFileSync('../../output/accounts-deep-connections.json', 'utf8')
+      fs.readFileSync(connectionsPath, 'utf8')
     );
     
     // Start building the Mermaid diagram
@@ -101,7 +103,8 @@ function generateAccountsMermaid() {
     mermaid += '```\n';
     
     // Save to file
-    fs.writeFileSync('../../output/accounts-board-diagram.md', mermaid);
+    const outputPath = path.join(__dirname, '../../output/accounts-board-diagram.md');
+    fs.writeFileSync(outputPath, mermaid);
     console.log('✅ Mermaid diagram saved to: output/accounts-board-diagram.md\n');
     
     // Also output to console

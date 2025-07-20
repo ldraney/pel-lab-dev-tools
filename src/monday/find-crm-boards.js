@@ -135,7 +135,9 @@ async function findCRMBoards() {
       timestamp: new Date().toISOString()
     };
     
-    fs.writeFileSync('../../output/crm-boards-config.json', JSON.stringify(config, null, 2));
+    const path = require('path');
+    const outputPath = path.join(__dirname, '../../output/crm-boards-config.json');
+    fs.writeFileSync(outputPath, JSON.stringify(config, null, 2));
     console.log(`💾 Saved to: output/crm-boards-config.json\n`);
     
     // Generate Mermaid diagram
