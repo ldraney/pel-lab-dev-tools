@@ -96,31 +96,60 @@ const boardsQuery = `
 `;
 ```
 
-### Mirror Column Detection
-Mirror columns can be identified by:
-- Column type: 'mirror'
-- Settings may not always contain source board ID
-- Column names often indicate source (e.g., "Production Status", "Dev Deals Status")
+### 🔑 Critical Insight: Board Connections Hierarchy
+
+**PRIMARY CONNECTION METHOD: `board_relation` columns**
+- `board_relation` columns are the actual connections between boards
+- These establish the fundamental relationships and data flow
+- Mirror columns are DERIVED from these primary connections
+- Always trace `board_relation` first, then analyze mirrors for data visualization
+
+**Connection Types (in order of reliability):**
+1. **`board_relation`** - Primary connections (most reliable)
+2. **`dependency`** - Task/project dependencies  
+3. **`mirror`** - Display data from connected boards (derived)
+
+### Connection Discovery Pattern
+```javascript
+// CORRECT: Look for board_relation first
+const connectColumns = board.columns.filter(col => 
+  col.type === 'board_relation' || col.type === 'dependency'
+);
+
+connectColumns.forEach(col => {
+  const settings = JSON.parse(col.settings_str);
+  const connectedBoardIds = settings.boardIds || [settings.board_id];
+  // These are the ACTUAL connections
+});
+```
 
 ### Connection Mapping Strategy
 1. Get all boards with workspace info
-2. Filter by target workspace
-3. Analyze column types for connections
-4. Infer missing connections from column names
-5. Generate visual diagram with Mermaid
+2. **Filter for `board_relation` columns first** (PRIMARY)
+3. Parse `settings_str` for connected `boardIds`
+4. Fetch connected board details
+5. Follow `board_relation` chain for flow tracing
+6. Use mirror columns for data visualization only
 
 ## 📋 Common Tasks
 
 ### Trace Any Board's Connections
 ```javascript
-// Pattern to trace connections from any board
+// UPDATED Pattern: board_relation first
 const BOARD_ID = 'target_board_id';
 1. Get board details with columns
-2. Filter for connection-type columns (mirror, board-relation, dependency)
-3. Parse settings_str for connected board IDs
-4. Fetch connected board details
-5. Generate connection map
+2. **Filter for board_relation columns FIRST** (primary connections)
+3. Parse settings_str for boardIds array
+4. Follow board_relation chain for flow tracing
+5. Optional: Analyze mirror columns for data visualization
+6. Generate connection map with primary/secondary relationships
 ```
+
+### 🔗 Confirmed Connection Flow Examples
+**Accounts → Dev Deals → Development → EPO - Ingredients:**
+1. **Accounts** (9161287533) connects via mirror to **Dev Deals** (9161287503)
+2. **Dev Deals** (9161287503) connects via `board_relation` "Development Ticket" to **Development** (8446397459)
+3. **Development** (8446397459) connects via `board_relation` "EPOs - Ingredients" to **EPO - Ingredients** (9387127195)
 
 ### Generate Mermaid Diagrams
 ```javascript

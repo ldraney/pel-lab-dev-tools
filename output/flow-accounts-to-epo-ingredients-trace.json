@@ -1,0 +1,426 @@
+{
+  "flow": [
+    {
+      "step": 1,
+      "board": {
+        "id": "9161287533",
+        "name": "Accounts",
+        "workspace": "CRM",
+        "workspaceId": "11007618"
+      },
+      "primaryConnections": [
+        {
+          "columnId": "account_contact",
+          "columnName": "Contacts",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9161287505,
+            9409073763
+          ]
+        },
+        {
+          "columnId": "board_relation_mkrmatjm",
+          "columnName": "PEL-Production",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9304930311
+          ]
+        },
+        {
+          "columnId": "board_relation_mksg6nb6",
+          "columnName": "PEL - Shopify",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9334295979
+          ]
+        },
+        {
+          "columnId": "board_relation_mkrnb56g",
+          "columnName": "PEL-Development",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            8446397459
+          ]
+        },
+        {
+          "columnId": "board_relation_mkrzycc8",
+          "columnName": "Dev Deals",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9161287503
+          ]
+        },
+        {
+          "columnId": "board_relation_mkrz884a",
+          "columnName": "Prod Deals",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9384243852
+          ]
+        },
+        {
+          "columnId": "board_relation_mksjark6",
+          "columnName": "Projects",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9161287526
+          ]
+        },
+        {
+          "columnId": "board_relation_mkszw3zv",
+          "columnName": "link to Development",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            8446397459
+          ]
+        },
+        {
+          "columnId": "board_relation_mksz45vh",
+          "columnName": "link to Finalization",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            8887010257
+          ]
+        }
+      ],
+      "secondaryConnections": [
+        {
+          "columnId": "lookup_mkrmxq56",
+          "columnName": "Production Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mksg2nhr",
+          "columnName": "Shopify Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mkrn58fa",
+          "columnName": "Development Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "account_deal",
+          "columnName": "Deals",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mkrz4v9x",
+          "columnName": "Dev Deals Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mkrz94tc",
+          "columnName": "Prod Deals Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mksj94j3",
+          "columnName": "Project Status",
+          "columnType": "mirror"
+        }
+      ],
+      "nextBoard": {
+        "id": "9161287503",
+        "name": "Dev Deals",
+        "connectionColumn": "Dev Deals",
+        "connectionType": "board_relation"
+      },
+      "connectionMethod": "board_relation"
+    },
+    {
+      "step": 2,
+      "board": {
+        "id": "9161287503",
+        "name": "Dev Deals",
+        "workspace": "CRM",
+        "workspaceId": "11007618"
+      },
+      "primaryConnections": [
+        {
+          "columnId": "board_relation_mkrb62ea",
+          "columnName": "Development Ticket",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            8446397459
+          ]
+        },
+        {
+          "columnId": "deal_contact",
+          "columnName": "Contact(s)",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9161287505,
+            9409073763
+          ]
+        },
+        {
+          "columnId": "board_relation_mkrz9exy",
+          "columnName": "link to Accounts",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9161287533
+          ]
+        }
+      ],
+      "secondaryConnections": [
+        {
+          "columnId": "lookup_mks6cdpn",
+          "columnName": "Iteration Number",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mkrb94za",
+          "columnName": "Lab Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "deal_account",
+          "columnName": "Accounts",
+          "columnType": "mirror"
+        }
+      ],
+      "nextBoard": {
+        "id": "8446397459",
+        "name": "Development",
+        "connectionColumn": "Development Ticket",
+        "connectionType": "board_relation"
+      },
+      "connectionMethod": "board_relation"
+    },
+    {
+      "step": 3,
+      "board": {
+        "id": "8446397459",
+        "name": "Development",
+        "workspace": "Lab",
+        "workspaceId": "9736208"
+      },
+      "primaryConnections": [
+        {
+          "columnId": "board_relation_mksr8yb7",
+          "columnName": "Ingredients to Order",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9425451655
+          ]
+        },
+        {
+          "columnId": "board_relation_mks3d1ap",
+          "columnName": "EPOs - Ingredients",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9387127195
+          ]
+        },
+        {
+          "columnId": "board_relation_mksa2ssv",
+          "columnName": "EPOs - Materials & Benchmarks",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9454447162
+          ]
+        },
+        {
+          "columnId": "board_relation_mks91j3b",
+          "columnName": "PEL - Finalization",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            8887010257
+          ]
+        },
+        {
+          "columnId": "board_relation_mks5hp3x",
+          "columnName": "Dev Deals",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9161287503
+          ]
+        },
+        {
+          "columnId": "board_relation_mkrca832",
+          "columnName": "MO Board - Bulk",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9247212949,
+            8768285252
+          ]
+        },
+        {
+          "columnId": "board_relation_mks56tnf",
+          "columnName": "Prod Deals",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9384243852
+          ]
+        },
+        {
+          "columnId": "board_relation_mkse81jw",
+          "columnName": "link to Contacts",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9161287505
+          ]
+        },
+        {
+          "columnId": "board_relation_mksmcvbm",
+          "columnName": "link to Blockers",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9490857115
+          ]
+        },
+        {
+          "columnId": "board_relation_mksnp2pn",
+          "columnName": "link to EPOs - Ingredients",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9387127195
+          ]
+        },
+        {
+          "columnId": "board_relation_mksz3y9x",
+          "columnName": "Accounts",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9161287533
+          ]
+        }
+      ],
+      "secondaryConnections": [
+        {
+          "columnId": "lookup_mksa1q8b",
+          "columnName": "Ingredients Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mksa6v8h",
+          "columnName": "Materials Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mks3xcc1",
+          "columnName": "EPO stage",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mks9caq1",
+          "columnName": "Batch Record Template",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mks9rrvc",
+          "columnName": "COA Template",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mkrerhvd",
+          "columnName": "MO bulk Status",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mks5xfvp",
+          "columnName": "Mirror",
+          "columnType": "mirror"
+        },
+        {
+          "columnId": "lookup_mks54m4t",
+          "columnName": "Mirror 1",
+          "columnType": "mirror"
+        }
+      ],
+      "nextBoard": {
+        "id": "9387127195",
+        "name": "EPO - Ingredients",
+        "connectionColumn": "EPOs - Ingredients",
+        "connectionType": "board_relation"
+      },
+      "connectionMethod": "board_relation"
+    },
+    {
+      "step": 4,
+      "board": {
+        "id": "9387127195",
+        "name": "EPOs - Ingredients",
+        "workspace": "VRM - Purchasing",
+        "workspaceId": "11346231"
+      },
+      "primaryConnections": [
+        {
+          "columnId": "board_relation_mks4p67m",
+          "columnName": "Ingredients",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9425451655
+          ]
+        },
+        {
+          "columnId": "board_relation_mks2ycxk",
+          "columnName": "Production Orders",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9304930311,
+            8768285252
+          ]
+        },
+        {
+          "columnId": "board_relation_mksnbjqx",
+          "columnName": "Development",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            8446397459
+          ]
+        },
+        {
+          "columnId": "deal_contact",
+          "columnName": "Contacts",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9387127114
+          ]
+        },
+        {
+          "columnId": "board_relation_mks8agt2",
+          "columnName": "Vendor Accounts",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9387127144
+          ]
+        },
+        {
+          "columnId": "board_relation_mks3f4n1",
+          "columnName": "link to Bulk Batch Traceability",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            8768285252
+          ]
+        },
+        {
+          "columnId": "board_relation_mks5mczj",
+          "columnName": "link to Prod Deals",
+          "columnType": "board_relation",
+          "connectedBoardIds": [
+            9384243852
+          ]
+        }
+      ],
+      "secondaryConnections": [
+        {
+          "columnId": "deal_account",
+          "columnName": "Vendor",
+          "columnType": "mirror"
+        }
+      ],
+      "nextBoard": null,
+      "connectionMethod": null
+    }
+  ],
+  "timestamp": "2025-07-20T21:38:05.236Z",
+  "method": "board_relation_primary",
+  "success": true,
+  "insights": [
+    "Accounts → Dev Deals: PRIMARY connection via board_relation \"Dev Deals\"",
+    "Dev Deals → Development: PRIMARY connection via board_relation \"Development Ticket\"",
+    "Development → EPO - Ingredients: PRIMARY connection via board_relation \"EPOs - Ingredients\""
+  ]
+}
